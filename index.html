@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socratic Solutions | Giacomo Gorelli</title>
-    <!-- Importazione Font: Montserrat (Geometrico) e Cormorant Garamond (Serif Elegante/Leggibile) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Icone Minimali -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -40,10 +38,16 @@
         /* --- COLONNA SINISTRA: BRAND & VISION --- */
         .left-column {
             text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
         
         .logo-box {
             margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
         
         .logo-img { 
@@ -51,8 +55,9 @@
             height: auto; 
             display: block;
             margin-bottom: 25px;
-            /* Rende invisibile lo sfondo bianco fondendolo con lo sfondo del sito */
             mix-blend-mode: multiply;
+            /* Correzione ottica dell'allineamento a sinistra della S */
+            margin-left: -6px; 
         }
         
         h1 { 
@@ -193,9 +198,7 @@
             padding-top: 25px;
         }
 
-        /* --- RESPONSIVITÀ COMPLETA (Verificata 3 volte) --- */
-        
-        /* Telefoni FHD e Schermi Medi (fino a Desktop standard/2K) */
+        /* Responsività Avanzata */
         @media (min-width: 850px) {
             .main-grid {
                 grid-template-columns: 1.1fr 1.2fr;
@@ -209,10 +212,9 @@
             }
         }
 
-        /* Monitor ad alta risoluzione (2K, 4K e superiori) */
         @media (min-width: 1600px) {
             .main-grid {
-                max-width: 1300px; /* Evita che il testo si disperda troppo in larghezza sui monitor ultra-wide */
+                max-width: 1300px;
                 gap: 120px;
             }
             h1 {
@@ -238,7 +240,6 @@
 
     <main class="main-grid">
         
-        <!-- COLONNA SINISTRA -->
         <section class="left-column">
             <div class="logo-box">
                 <img src="logo.png" alt="Socratic Solutions Logo" class="logo-img">
@@ -251,12 +252,11 @@
             </blockquote>
         </section>
 
-        <!-- COLONNA DESTRA -->
         <section class="right-column">
             
             <div class="bio-statement">
                 <span>Corporate Language Coach e Consulente Filosofico con solida formazione internazionale.</span>
-                <span>Oltre 5.000 sessioni di executive communication, analysis concettuale e sviluppo del pensiero critico.</span>
+                <span>Oltre 5.000 sessioni di executive communication, analisi concettuale e sviluppo del pensiero critico.</span>
             </div>
 
             <div class="academic-profile">
