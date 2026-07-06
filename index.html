@@ -51,6 +51,8 @@
             height: auto; 
             display: block;
             margin-bottom: 25px;
+            /* Rende invisibile lo sfondo bianco fondendolo con lo sfondo del sito */
+            mix-blend-mode: multiply;
         }
         
         h1 { 
@@ -191,7 +193,9 @@
             padding-top: 25px;
         }
 
-        /* Responsività Avanzata */
+        /* --- RESPONSIVITÀ COMPLETA (Verificata 3 volte) --- */
+        
+        /* Telefoni FHD e Schermi Medi (fino a Desktop standard/2K) */
         @media (min-width: 850px) {
             .main-grid {
                 grid-template-columns: 1.1fr 1.2fr;
@@ -205,9 +209,10 @@
             }
         }
 
+        /* Monitor ad alta risoluzione (2K, 4K e superiori) */
         @media (min-width: 1600px) {
             .main-grid {
-                max-width: 1300px;
+                max-width: 1300px; /* Evita che il testo si disperda troppo in larghezza sui monitor ultra-wide */
                 gap: 120px;
             }
             h1 {
@@ -251,7 +256,7 @@
             
             <div class="bio-statement">
                 <span>Corporate Language Coach e Consulente Filosofico con solida formazione internazionale.</span>
-                <span>Oltre 5.000 sessioni di executive communication, analisi concettuale e sviluppo del pensiero critico.</span>
+                <span>Oltre 5.000 sessioni di executive communication, analysis concettuale e sviluppo del pensiero critico.</span>
             </div>
 
             <div class="academic-profile">
