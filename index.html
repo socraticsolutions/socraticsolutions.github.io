@@ -49,15 +49,21 @@
             flex-direction: column;
             align-items: flex-start;
         }
+
+        /* Contenitore di compensazione ottica calcolato al millesimo */
+        .logo-cropper {
+            position: relative;
+            /* Sposta l'immagine a sinistra di 24px per allineare perfettamente la S di SOLUTIONS del PNG con la S di Socratic del testo */
+            left: -24px; 
+            margin-bottom: 25px;
+            display: block;
+        }
         
         .logo-img { 
             max-width: 140px; 
             height: auto; 
             display: block;
-            margin-bottom: 25px;
             mix-blend-mode: multiply;
-            /* Correzione ottica dell'allineamento a sinistra della S */
-            margin-left: -6px; 
         }
         
         h1 { 
@@ -242,7 +248,9 @@
         
         <section class="left-column">
             <div class="logo-box">
-                <img src="logo.png" alt="Socratic Solutions Logo" class="logo-img">
+                <div class="logo-cropper">
+                    <img src="logo.png" alt="Socratic Solutions Logo" class="logo-img">
+                </div>
                 <h1>Socratic Solutions</h1>
                 <span class="subtitle">Consulenza Linguistica &amp; Filosofica</span>
             </div>
