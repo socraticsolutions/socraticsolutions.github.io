@@ -11,9 +11,9 @@
     <!-- Importazione Font: Montserrat (Geometrico) e Cormorant Garamond (Serif Elegante/Leggibile) -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link href="./defSocratic Solutions _ Giacomo Gorelli_files/css2" rel="stylesheet">
+    <link href="./one moireSocratic Solutions _ Giacomo Gorelli_files/css2" rel="stylesheet">
     <!-- Icone Minimali -->
-    <link rel="stylesheet" href="./defSocratic Solutions _ Giacomo Gorelli_files/all.min.css">
+    <link rel="stylesheet" href="./one moireSocratic Solutions _ Giacomo Gorelli_files/all.min.css">
     
     <style>
         /* Reset e Base Uniforme */
@@ -59,9 +59,8 @@
         /* Contenitore di compensazione ottica calcolato al millesimo */
         .logo-cropper {
             position: relative;
-            /* Sposta l'immagine a sinistra di 24px per allineare perfettamente la S di SOLUTIONS del PNG con la S di Socratic del testo */
             left: -24px; 
-            margin-bottom: 25px;
+            margin-bottom: 40px; /* Aumentato lo spazio tra il logo e il titolo H1 */
             display: block;
         }
         
@@ -177,6 +176,15 @@
             color: #1a1a1a;
             line-height: 1.8;
         }
+        
+        .service-description span {
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .service-description span:last-child {
+            margin-bottom: 0;
+        }
 
         /* Contatti */
         .interactive-contacts {
@@ -267,13 +275,12 @@
         <section class="left-column">
             <div class="logo-box">
                 <div class="logo-cropper">
-                    <img src="./defSocratic Solutions _ Giacomo Gorelli_files/logo.png" alt="Socratic Solutions Logo" class="logo-img">
+                    <img src="./one moireSocratic Solutions _ Giacomo Gorelli_files/logo.png" alt="Socratic Solutions Logo" class="logo-img">
                 </div>
                 <h1>Socratic Solutions</h1>
                 <span class="subtitle">Consulenza Linguistica &amp; Filosofica</span>
             </div>
             
-            <!-- Spaziatura originale mantenuta intatta con margin-top: 50px -->
             <blockquote>
                 "The unexamined life is not worth living."
             </blockquote>
@@ -291,10 +298,11 @@
 
             <!-- Bio Strutturata e Armonizzata -->
             <div class="bio-statement">
-                <!-- Sostituito la barra con "e" -->
                 <h3 class="role-headline">Executive Language Consultant e Consulente Filosofico</h3>
-                <!-- Tag p e classe service-description originali mantenuti, testo diviso in due con un a capo -->
-                <p class="service-description">Consulenza e formazione internazionale per professionisti e aziende.<br>Percorsi mirati di executive communication in lingua inglese, analisi concettuale e pensiero critico.</p>
+                <div class="service-description">
+                    <span>Consulenza e formazione internazionale per professionisti e aziende.</span>
+                    <span>Percorsi mirati di executive communication in lingua inglese, analisi concettuale e pensiero critico.</span>
+                </div>
             </div>
 
             <!-- Blocco Contatti -->
