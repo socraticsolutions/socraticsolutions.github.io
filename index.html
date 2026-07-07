@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0031)file:///home/un/Desktop/cv.html -->
+<html lang="it"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socratic Solutions | Giacomo Gorelli</title>
+    
+    <!-- Icona sulla barra dell'URL (Favicon) -->
+    <link rel="icon" type="image/png" href="file:///home/un/Desktop/favicon.png">
+    
     <!-- Importazione Font: Montserrat (Geometrico) e Cormorant Garamond (Serif Elegante/Leggibile) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./defSocratic Solutions _ Giacomo Gorelli_files/css2" rel="stylesheet">
     <!-- Icone Minimali -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./defSocratic Solutions _ Giacomo Gorelli_files/all.min.css">
     
     <style>
         /* Reset e Base Uniforme */
@@ -125,30 +129,13 @@
             border: 1px solid rgba(0, 0, 0, 0.03);
         }
 
-        /* Bio */
-        .bio-statement {
-            font-size: 1.05rem;
-            font-weight: 400;
-            color: #1a1a1a;
-            line-height: 1.8;
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-            padding-bottom: 30px;
-        }
-        
-        .bio-statement span {
-            display: block;
-            margin-bottom: 12px;
-        }
-        
-        .bio-statement span:last-child {
-            margin-bottom: 0;
-        }
-
         /* Sezione Accademica */
         .academic-profile {
             display: flex;
             flex-direction: column;
             gap: 8px;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            padding-bottom: 30px;
         }
         
         .author-name {
@@ -164,6 +151,31 @@
             color: #666;
             letter-spacing: 0.3px;
             font-weight: 300;
+        }
+
+        /* Bio e Servizi Armonizzati */
+        .bio-statement {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        
+        /* Titolo dei Ruoli Professionale in Alto Rilievo */
+        .role-headline {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #333333;
+            line-height: 1.4;
+        }
+        
+        /* Testo di Descrizione Servizi */
+        .service-description {
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: #1a1a1a;
+            line-height: 1.8;
         }
 
         /* Contatti */
@@ -235,8 +247,11 @@
                 font-size: 1.8rem;
                 max-width: 500px;
             }
-            .bio-statement {
+            .service-description {
                 font-size: 1.15rem;
+            }
+            .role-headline {
+                font-size: 1rem;
             }
             .right-column {
                 padding: 60px;
@@ -252,12 +267,13 @@
         <section class="left-column">
             <div class="logo-box">
                 <div class="logo-cropper">
-                    <img src="logo.png" alt="Socratic Solutions Logo" class="logo-img">
+                    <img src="./defSocratic Solutions _ Giacomo Gorelli_files/logo.png" alt="Socratic Solutions Logo" class="logo-img">
                 </div>
                 <h1>Socratic Solutions</h1>
                 <span class="subtitle">Consulenza Linguistica &amp; Filosofica</span>
             </div>
             
+            <!-- Spaziatura originale mantenuta intatta con margin-top: 50px -->
             <blockquote>
                 "The unexamined life is not worth living."
             </blockquote>
@@ -266,17 +282,22 @@
         <!-- COLONNA DESTRA -->
         <section class="right-column">
             
-            <div class="bio-statement">
-                <span>Corporate Language Coach e Consulente Filosofico con solida formazione internazionale.</span>
-                <span>Specializzato in executive communication in lingua inglese, analisi concettuale e sviluppo del pensiero critico.</span>
-            </div>
-
+            <!-- Profilo Accademico -->
             <div class="academic-profile">
-                <div class="author-name">Giacomo Gorelli</div>
-                <div class="degree-item">MA Philosophy &ndash; University of Amsterdam</div>
-                <div class="degree-item">BA (Hons) Philosophy &ndash; University of Stirling</div>
+                <div class="author-name">di Giacomo Gorelli</div>
+                <div class="degree-item">MA Philosophy – University of Amsterdam</div>
+                <div class="degree-item">BA (Hons) Philosophy – University of Stirling</div>
             </div>
 
+            <!-- Bio Strutturata e Armonizzata -->
+            <div class="bio-statement">
+                <!-- Sostituito la barra con "e" -->
+                <h3 class="role-headline">Executive Language Consultant e Consulente Filosofico</h3>
+                <!-- Tag p e classe service-description originali mantenuti, testo diviso in due con un a capo -->
+                <p class="service-description">Consulenza e formazione internazionale per professionisti e aziende.<br>Percorsi mirati di executive communication in lingua inglese, analisi concettuale e pensiero critico.</p>
+            </div>
+
+            <!-- Blocco Contatti -->
             <div class="interactive-contacts">
                 <a href="mailto:socraticsolutions@proton.me" class="contact-inline">
                     <i class="fa-regular fa-envelope"></i> socraticsolutions@proton.me
@@ -286,15 +307,16 @@
                 </a>
             </div>
 
+            <!-- Footer Fiscale -->
             <footer>
                 SOCRATIC SOLUTIONS di GORELLI GIACOMO <br>
                 Partita IVA: 02529010510 <br>
-                &copy; 2026 All rights reserved.
+                © 2026 All rights reserved.
             </footer>
             
         </section>
 
     </main>
 
-</body>
-</html>
+
+</body></html>
