@@ -50,7 +50,7 @@
 
         .logo-cropper {
             position: relative;
-            left: -13px; 
+            left: -14px; 
             margin-bottom: 25px;
             display: block;
         }
@@ -173,6 +173,8 @@
             border-bottom: 1px solid rgba(0,0,0,0.15);
             padding-bottom: 2px;
             transition: all 0.2s ease;
+            cursor: pointer;
+            position: relative;
         }
         
         .contact-inline:hover {
@@ -182,6 +184,28 @@
         
         .contact-inline i {
             font-size: 0.95rem;
+        }
+
+        .tooltip::after {
+            content: "Copiato!";
+            position: absolute;
+            bottom: 130%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a1a1a;
+            color: #fff;
+            font-size: 0.7rem;
+            padding: 4px 8px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .tooltip.show::after {
+            opacity: 1;
         }
 
         footer { 
@@ -229,6 +253,44 @@
             }
         }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Socratic Solutions di Giacomo Gorelli",
+      "image": "https://www.socraticsolutions.it/logo.png",
+      "@id": "https://www.socraticsolutions.it",
+      "url": "https://www.socraticsolutions.it",
+      "telephone": "",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IT"
+      },
+      "knowsAbout": [
+        "Consulenza Filosofica",
+        "Consulenza Linguistica",
+        "Executive Communication",
+        "Pensiero Critico",
+        "Analisi Concettuale"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Giacomo Gorelli",
+        "jobTitle": "Executive Language Consultant e Consulente Filosofico",
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "University of Amsterdam"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "University of Stirling"
+          }
+        ]
+      }
+    }
+    </script>
 </head>
 <body>
 
@@ -263,11 +325,14 @@
             </blockquote>
 
             <div class="interactive-contacts">
-                <a href="mailto:socraticsolutions@proton.me" class="contact-inline">
+                <a id="emailLink" class="contact-inline tooltip">
                     <i class="fa-regular fa-envelope"></i> socraticsolutions@proton.me
                 </a>
                 <a href="https://uk.linkedin.com/in/giacomogorelli" target="_blank" class="contact-inline">
                     <i class="fa-brands fa-linkedin-in"></i> linkedin.com/in/giacomogorelli
+                </a>
+                <a id="vcardLink" class="contact-inline">
+                    <i class="fa-solid fa-user-plus"></i> Salva contatto
                 </a>
             </div>
 
@@ -280,6 +345,40 @@
         </section>
 
     </main>
+
+    <script>
+        document.getElementById('emailLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            const email = 'socraticsolutions@proton.me';
+            navigator.clipboard.writeText(email).then(() => {
+                const tooltip = document.getElementById('emailLink');
+                tooltip.classList.add('show');
+                setTimeout(() => tooltip.classList.remove('show'), 2000);
+            });
+        });
+
+        document.getElementById('vcardLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            const vcardData = [
+                "BEGIN:VCARD",
+                "VERSION:3.0",
+                "FN:Giacomo Gorelli",
+                "ORG:Socratic Solutions",
+                "TITLE:Executive Language Consultant & Consulente Filosofico",
+                "EMAIL;TYPE=INTERNET;TYPE=WORK:socraticsolutions@proton.me",
+                "URL;TYPE=WORK:https://uk.linkedin.com/in/giacomogorelli",
+                "END:VCARD"
+            ].join("\n");
+            
+            const blob = new Blob([vcardData], { type: "text/vcard;charset=utf-8;" });
+            const url = URL.createObjectURL(blob);
+            const newLink = document.createElement("a");
+            newLink.download = "Giacomo_Gorelli.vcf";
+            newLink.href = url;
+            newLink.click();
+            URL.revokeObjectURL(url);
+        });
+    </script>
 
 </body>
 </html>
