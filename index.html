@@ -331,9 +331,6 @@
                 <a href="https://uk.linkedin.com/in/giacomogorelli" target="_blank" class="contact-inline">
                     <i class="fa-brands fa-linkedin-in"></i> linkedin.com/in/giacomogorelli
                 </a>
-                <a id="vcardLink" class="contact-inline">
-                    <i class="fa-solid fa-user-plus"></i> Salva contatto
-                </a>
             </div>
 
             <footer>
@@ -355,28 +352,6 @@
                 tooltip.classList.add('show');
                 setTimeout(() => tooltip.classList.remove('show'), 2000);
             });
-        });
-
-        document.getElementById('vcardLink').addEventListener('click', function(e) {
-            e.preventDefault();
-            const vcardData = [
-                "BEGIN:VCARD",
-                "VERSION:3.0",
-                "FN:Giacomo Gorelli",
-                "ORG:Socratic Solutions",
-                "TITLE:Executive Language Consultant & Consulente Filosofico",
-                "EMAIL;TYPE=INTERNET;TYPE=WORK:socraticsolutions@proton.me",
-                "URL;TYPE=WORK:https://uk.linkedin.com/in/giacomogorelli",
-                "END:VCARD"
-            ].join("\n");
-            
-            const blob = new Blob([vcardData], { type: "text/vcard;charset=utf-8;" });
-            const url = URL.createObjectURL(blob);
-            const newLink = document.createElement("a");
-            newLink.download = "Giacomo_Gorelli.vcf";
-            newLink.href = url;
-            newLink.click();
-            URL.revokeObjectURL(url);
         });
     </script>
 
