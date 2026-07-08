@@ -4,19 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socratic Solutions | Giacomo Gorelli</title>
-    
-    <!-- Favicon -->
     <link class="favicon" rel="icon" type="image/png" href="favicon.png">
-    
-    <!-- Importazione Font: Montserrat (Geometrico) e Cormorant Garamond (Serif Elegante/Leggibile) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Icone Minimali -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
-        /* Reset e Base Uniforme */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         
         body { 
@@ -31,7 +24,6 @@
             padding: 40px 24px;
         }
 
-        /* Griglia Principale Asimmetrica */
         .main-grid { 
             max-width: 1100px; 
             width: 100%;
@@ -41,7 +33,6 @@
             align-items: start;
         }
 
-        /* --- COLONNA SINISTRA: BRAND & VISION --- */
         .left-column {
             text-align: left;
             display: flex;
@@ -57,10 +48,8 @@
             align-items: flex-start;
         }
 
-        /* Contenitore di compensazione ottica calcolato al millesimo */
         .logo-cropper {
             position: relative;
-            /* Sposta l'immagine a sinistra di 24px per allineare perfettamente la S di SOLUTIONS del PNG con la S di Socratic del testo */
             left: -24px; 
             margin-bottom: 25px;
             display: block;
@@ -92,7 +81,6 @@
             display: block;
         }
 
-        /* Quotation */
         blockquote { 
             font-family: 'Cormorant Garamond', serif; 
             font-style: italic; 
@@ -118,7 +106,6 @@
             margin-top: 12px;
         }
 
-        /* --- COLONNA DESTRA: BIO, CREDENZIALI & CONTATTI --- */
         .right-column {
             display: flex;
             flex-direction: column;
@@ -130,7 +117,6 @@
             border: 1px solid rgba(0, 0, 0, 0.03);
         }
 
-        /* Bio */
         .bio-statement {
             font-size: 1.05rem;
             font-weight: 400;
@@ -149,7 +135,6 @@
             margin-bottom: 0;
         }
 
-        /* Sezione Accademica */
         .academic-profile {
             display: flex;
             flex-direction: column;
@@ -171,7 +156,6 @@
             font-weight: 300;
         }
 
-        /* Contatti */
         .interactive-contacts {
             display: flex;
             flex-wrap: wrap;
@@ -201,7 +185,6 @@
             font-size: 0.95rem;
         }
 
-        /* Footer Fiscale */
         footer { 
             font-size: 0.68rem; 
             color: #888;
@@ -211,7 +194,6 @@
             padding-top: 25px;
         }
 
-        /* Responsività Avanzata */
         @media (min-width: 850px) {
             .main-grid {
                 grid-template-columns: 1.1fr 1.2fr;
@@ -253,22 +235,16 @@
 
     <main class="main-grid">
         
-        <!-- COLONNA SINISTRA -->
         <section class="left-column">
             <div class="logo-box">
                 <div class="logo-cropper">
                     <img src="logo.png" alt="Socratic Solutions Logo" class="logo-img">
                 </div>
                 <h1>Socratic Solutions</h1>
-                <span class="subtitle">Consulenza Linguistica &amp; Filosofica</span>
+                <span class="subtitle">consulenza filosofica e linguistica</span>
             </div>
-            
-            <blockquote>
-                "The unexamined life is not worth living."
-            </blockquote>
         </section>
 
-        <!-- COLONNA DESTRA -->
         <section class="right-column">
             
             <div class="academic-profile">
@@ -282,6 +258,10 @@
                 <span>Consulenza e formazione internazionale per professionisti e aziende.</span>
                 <span>Percorsi mirati di executive communication in lingua inglese, analisi concettuale e pensiero critico.</span>
             </div>
+
+            <blockquote>
+                "The unexamined life is not worth living."
+            </blockquote>
 
             <div class="interactive-contacts">
                 <a href="mailto:socraticsolutions@proton.me" class="contact-inline">
