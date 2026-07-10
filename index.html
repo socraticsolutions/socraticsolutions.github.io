@@ -4,13 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socratic Solutions | Giacomo Gorelli</title>
+    
+    <!-- Meta Tag SEO e Social -->
+    <meta name="description" content="Consulenza linguistica e filosofica di Giacomo Gorelli. Executive communication in lingua inglese, analisi concettuale e pensiero critico.">
+    <meta name="keywords" content="Giacomo Gorelli, Socratic Solutions, Consulenza Filosofica, Consulenza Linguistica, Executive Communication, Pensiero Critico">
+    <meta name="author" content="Giacomo Gorelli">
+    <meta property="og:title" content="Socratic Solutions | Giacomo Gorelli">
+    <meta property="og:description" content="Consulenza linguistica e filosofica di Giacomo Gorelli. Executive communication e pensiero critico.">
+    <meta property="og:image" content="https://www.socraticsolutions.it/logo.png">
+    <meta property="og:url" content="https://www.socraticsolutions.it">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link class="favicon" rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        html {
+            scroll-behavior: smooth;
+        }
         
         body { 
             font-family: 'Montserrat', sans-serif; 
@@ -40,9 +56,31 @@
             align-items: flex-start;
             gap: 50px;
         }
+
+        /* Navigazione Minimale SEO */
+        .seo-nav {
+            display: flex;
+            gap: 20px;
+            margin-bottom: -10px;
+        }
+
+        .seo-nav a {
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #1a1a1a;
+            opacity: 0.4;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.2s ease;
+        }
+
+        .seo-nav a:hover {
+            opacity: 0.9;
+        }
         
         .logo-box {
-            margin-top: 20px; 
+            margin-top: 10px; 
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -63,7 +101,7 @@
         }
         
         h1 { 
-            font-size: 2.8rem; 
+            font-size: 2.6rem; /* Ridotto di 2 punti */
             font-weight: 400;  
             letter-spacing: 5px; 
             text-transform: uppercase;
@@ -217,6 +255,18 @@
             padding-top: 25px;
         }
 
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
         @media (min-width: 850px) {
             .main-grid {
                 grid-template-columns: 1.1fr 1.2fr;
@@ -236,7 +286,7 @@
                 gap: 120px;
             }
             h1 {
-                font-size: 3.5rem;
+                font-size: 3.3rem; /* Ridotto proporzionalmente */
             }
             .subtitle {
                 font-size: 1.1rem;
@@ -253,6 +303,7 @@
             }
         }
     </style>
+    
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -297,7 +348,13 @@
     <main class="main-grid">
         
         <section class="left-column">
-            <div class="logo-box">
+            <nav class="seo-nav">
+                <a href="#home" title="Inizio pagina">Home</a>
+                <a href="#about" title="Profilo professionale">About</a>
+                <a href="#contatti" title="Contatti">Contatti</a>
+            </nav>
+
+            <div class="logo-box" id="home">
                 <div class="logo-cropper">
                     <img src="logo.png" alt="Socratic Solutions Logo" class="logo-img">
                 </div>
@@ -306,6 +363,7 @@
             </div>
 
             <div class="academic-profile">
+                <h2 class="sr-only">Profilo Accademico e Professionale</h2>
                 <div class="author-name">di Giacomo Gorelli</div>
                 <div class="degree-item">MA Philosophy &ndash; University of Amsterdam</div>
                 <div class="degree-item">BA (Hons) Philosophy &ndash; University of Stirling</div>
@@ -313,23 +371,25 @@
             </div>
         </section>
 
-        <section class="right-column">
+        <section class="right-column" id="about">
+            <h2 class="sr-only">Metodo e Filosofia Aziendale</h2>
             
             <div class="bio-statement">
                 <span>Consulenza e formazione internazionale per privati, professionisti e aziende.</span>
-                <span>Percorsi mirati di executive communication in lingua inglese, analisi concettuale e pensiero critico.</span>
+                <span>Executive communication in lingua inglese, analisi concettuale e pensiero critico.</span>
             </div>
 
             <blockquote>
                 "The unexamined life is not worth living."
             </blockquote>
 
-            <div class="interactive-contacts">
-                <a id="emailLink" class="contact-inline tooltip">
-                    <i class="fa-regular fa-envelope"></i> socraticsolutions@proton.me
+            <div class="interactive-contacts" id="contatti">
+                <h2 class="sr-only">Contatti Professionali</h2>
+                <a id="emailLink" class="contact-inline tooltip" aria-label="Copia indirizzo email">
+                    <i class="fa-regular fa-envelope" aria-hidden="true"></i> socraticsolutions@proton.me
                 </a>
-                <a href="https://uk.linkedin.com/in/giacomogorelli" target="_blank" class="contact-inline">
-                    <i class="fa-brands fa-linkedin-in"></i> linkedin.com/in/giacomogorelli
+                <a href="https://uk.linkedin.com/in/giacomogorelli" target="_blank" class="contact-inline" aria-label="Profilo LinkedIn">
+                    <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> linkedin.com/in/giacomogorelli
                 </a>
             </div>
 
