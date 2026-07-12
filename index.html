@@ -199,7 +199,6 @@
             flex-direction: column;
             align-items: flex-start;
             gap: 16px;
-            margin-top: 12px; /* Aumenta lo spazio tra quote e contatti */
         }
         
         .contact-inline {
@@ -257,7 +256,6 @@
             line-height: 1.6;
             border-top: 1px solid rgba(0,0,0,0.06);
             padding-top: 25px;
-            margin-top: -16px; /* Diminuisce lo spazio tra contatti e footer */
         }
 
         .sr-only {
@@ -384,7 +382,7 @@
                 <span>Executive communication in lingua inglese, analisi concettuale e pensiero critico.</span>
             </div>
 
-            blockquote>
+            <blockquote>
                 "The unexamined life is not worth living."
             </blockquote>
 
@@ -403,6 +401,13 @@
                     <i class="fa-brands fa-telegram" aria-hidden="true"></i> t.me/socraticsolutions
                 </a>
             </div>
+
+            <style>
+                /* Micro-ottimizzazione locale dello spazio sopra il footer richiesto */
+                footer {
+                    margin-top: -8px;
+                }
+            </style>
 
             <footer>
                 SOCRATIC SOLUTIONS di GORELLI GIACOMO <br>
