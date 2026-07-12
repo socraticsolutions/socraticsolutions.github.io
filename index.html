@@ -146,7 +146,7 @@
         .right-column {
             display: flex;
             flex-direction: column;
-            gap: 45px;
+            gap: 40px;
             text-align: left;
             background: rgba(255, 255, 255, 0.45); 
             padding: 40px;
@@ -193,17 +193,18 @@
             font-weight: 300;
         }
 
+        /* Lista Contatti Verticale Ordinata */
         .interactive-contacts {
             display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            margin-top: -10px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
         }
         
         .contact-inline {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             color: #000000;
             text-decoration: none;
             font-weight: 500;
@@ -221,7 +222,9 @@
         }
         
         .contact-inline i {
-            font-size: 0.95rem;
+            font-size: 1rem;
+            width: 20px;
+            text-align: center;
         }
 
         .tooltip::after {
@@ -385,12 +388,15 @@
 
             <div class="interactive-contacts" id="contacts">
                 <h2 class="sr-only">Contatti Professionali</h2>
-                <a id="emailLink" class="contact-inline tooltip" aria-label="Copia indirizzo email">
+                
+                <button id="emailLink" class="contact-inline tooltip" aria-label="Copia indirizzo email" style="background: none; border-top: none; border-left: none; border-right: none; font-family: inherit; width: auto; text-align: left;">
                     <i class="fa-regular fa-envelope" aria-hidden="true"></i> socraticsolutions@proton.me
-                </a>
+                </button>
+                
                 <a href="https://t.me/socraticsolutions" target="_blank" class="contact-inline" aria-label="Canale Telegram di Socratic Solutions">
                     <i class="fa-brands fa-telegram" aria-hidden="true"></i> @socraticsolutions
                 </a>
+                
                 <a href="https://uk.linkedin.com/in/giacomogorelli" target="_blank" rel="me" class="contact-inline" aria-label="Profilo LinkedIn di Giacomo Gorelli">
                     <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> linkedin.com/in/giacomogorelli
                 </a>
