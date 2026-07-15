@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socratic Solutions | Giacomo Gorelli</title>
+    
+    <!-- SEO and Social Meta Tags -->
+    <meta name="description" content="Linguistic and philosophical consulting by Giacomo Gorelli. Executive communication in English, conceptual analysis and critical thinking.">
+    <meta name="keywords" content="Giacomo Gorelli, Socratic Solutions, Philosophical Consulting, Linguistic Consulting, Executive Communication, Critical Thinking">
+    <meta name="author" content="Giacomo Gorelli">
+    <meta property="og:title" content="Socratic Solutions | Giacomo Gorelli">
+    <meta property="og:description" content="Linguistic and philosophical consulting by Giacomo Gorelli. Executive communication and critical thinking.">
+    <meta property="og:image" content="https://www.socraticsolutions.it/logo.png">
+    <meta property="og:url" content="https://www.socraticsolutions.it/index-en.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link class="favicon" rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500;1,600&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            line-height: 1.65; 
+            color: #1a1a1a; 
+            background-color: #fdf1e7; 
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 24px;
+        }
+
+        .main-grid { 
+            max-width: 1100px; 
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .left-column {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 50px;
+        }
+
+        /* Minimal SEO Nav with language switcher */
+        .seo-nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: -10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .seo-nav a {
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #1a1a1a;
+            opacity: 0.4;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.2s ease;
+        }
+
+        .seo-nav a:hover {
+            opacity: 0.9;
+        }
+
+        .lang-selector {
+            font-weight: 600 !important;
+            opacity: 0.7 !important;
+        }
+
+        .lang-selector:hover {
+            opacity: 1 !important;
+        }
+        
+        .logo-box {
+            margin-top: 10px; 
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo-cropper {
+            position: relative;
+            left: -15px; 
+            margin-bottom: 25px;
+            display: block;
+        }
+        
+        .logo-img { 
+            max-width: 98px; 
+            height: auto; 
+            display: block;
+            mix-blend-mode: multiply;
+        }
+        
+        h1 { 
+            font-size: 2.6rem; 
+            font-weight: 400;  
+            letter-spacing: 5px; 
+            text-transform: uppercase;
+            color: #000000;
+            line-height: 1.15;
+            margin-bottom: 12px;
+        }
+        
+        .subtitle { 
+            font-size: 0.95rem; 
+            color: #444; 
+            text-transform: uppercase; 
+            letter-spacing: 4px; 
+            font-weight: 400;
+            display: block;
+        }
+
+        blockquote { 
+            font-family: 'Cormorant Garamond', serif; 
+            font-style: italic; 
+            font-size: 1.6rem; 
+            font-weight: 500;
+            color: #222; 
+            line-height: 1.4;
+            border-left: 2px solid rgba(0,0,0,0.15);
+            padding-left: 20px;
+            max-width: 450px;
+        }
+        
+        blockquote::after {
+            content: "— Socrates";
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-style: normal;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #888;
+            margin-top: 12px;
+        }
+
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 45px;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.45); 
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .bio-statement {
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: #1a1a1a;
+            line-height: 1.8;
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            padding-bottom: 30px;
+        }
+        
+        .bio-statement span {
+            display: block;
+            margin-bottom: 12px;
+        }
+        
+        .bio-statement span:last-child {
+            margin-bottom: 0;
+        }
+
+        .academic-profile {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .author-name {
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #2c2c2c;
+        }
+        
+        .degree-item {
+            font-size: 0.78rem;
+            color: #666;
+            letter-spacing: 0.3px;
+            font-weight: 300;
+        }
+
+        .interactive-contacts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            margin-top: 10px;
+        }
+        
+        .contact-inline {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #000000;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(0,0,0,0.15);
+            padding-bottom: 2px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .contact-inline:hover {
+            color: #666;
+            border-bottom-color: transparent;
+        }
+        
+        .contact-inline i {
+            font-size: 0.95rem;
+        }
+
+        .tooltip::after {
+            content: "Copied!";
+            position: absolute;
+            bottom: 130%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a1a1a;
+            color: #fff;
+            font-size: 0.7rem;
+            padding: 4px 8px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .tooltip.show::after {
+            opacity: 1;
+        }
+
+        footer { 
+            font-size: 0.68rem; 
+            color: #888;
+            letter-spacing: 0.5px;
+            line-height: 1.6;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            padding-top: 25px;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        @media (min-width: 850px) {
+            .main-grid {
+                grid-template-columns: 1.1fr 1.2fr;
+                gap: 80px;
+            }
+            body {
+                padding: 0 40px;
+            }
+            .right-column {
+                padding: 50px;
+            }
+        }
+
+        @media (min-width: 1600px) {
+            .main-grid {
+                max-width: 1300px;
+                gap: 120px;
+            }
+            h1 {
+                font-size: 3.3rem;
+            }
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            .bio-statement {
+                font-size: 1.15rem;
+            }
+            blockquote {
+                font-size: 1.8rem;
+                max-width: 500px;
+            }
+            .right-column {
+                padding: 60px;
+            }
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Socratic Solutions by Giacomo Gorelli",
+      "image": "https://www.socraticsolutions.it/logo.png",
+      "@id": "https://www.socraticsolutions.it/index-en.html",
+      "url": "https://www.socraticsolutions.it/index-en.html",
+      "telephone": "",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IT"
+      },
+      "knowsAbout": [
+        "Philosophical Consulting",
+        "Linguistic Consulting",
+        "Executive Communication",
+        "Critical Thinking",
+        "Conceptual Analysis"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Giacomo Gorelli",
+        "jobTitle": "Executive Language Consultant and Philosophical Consultant",
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "University of Amsterdam"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "University of Stirling"
+          }
+        ]
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <main class="main-grid">
+        
+        <section class="left-column" id="home">
+            <nav class="seo-nav">
+                <div class="nav-links">
+                    <a href="#home" title="Home">Home</a>
+                    <a href="#about" title="About">About</a>
+                    <a href="#contacts" title="Contacts">Contacts</a>
+                </div>
+                <a href="index.html" class="lang-selector" title="Passa all'italiano">IT</a>
+            </nav>
+
+            <div class="logo-box">
+                <div class="logo-cropper">
+                    <img src="logo.png" alt="Socratic Solutions Logo" class="logo-img">
+                </div>
+                <h1>Socratic Solutions</h1>
+                <span class="subtitle">Linguistic and Philosophical Consulting</span>
+            </div>
+
+            <div class="academic-profile">
+                <p class="sr-only">Academic and Professional Profile of Giacomo Gorelli</p>
+                <div class="author-name">by Giacomo Gorelli</div>
+                <div class="degree-item">MA Philosophy &ndash; University of Amsterdam</div>
+                <div class="degree-item">BA (Hons) Philosophy &ndash; University of Stirling</div>
+                <div class="degree-item" style="font-weight: 500; color: #1a1a1a; margin-top: 4px;">Executive Language Consultant and Philosophical Consultant</div>
+            </div>
+        </section>
+
+        <section class="right-column" id="about">
+            <h2 class="sr-only">Method and Professional Vision</h2>
+            
+            <div class="bio-statement">
+                <span>International consulting and training for individuals, professionals, and companies.</span>
+                <span>Executive communication in English, conceptual analysis, and critical thinking.</span>
+            </div>
+
+            <blockquote>
+                "The unexamined life is not worth living."
+            </blockquote>
+
+            <div class="interactive-contacts" id="contacts">
+                <h2 class="sr-only">Professional Contacts</h2>
+                <a id="emailLink" class="contact-inline tooltip" role="button" tabindex="0" aria-label="Copy email address: socraticsolutions@proton.me">
+                    <i class="fa-regular fa-envelope" aria-hidden="true"></i> socraticsolutions@proton.me
+                </a>
+                <a href="https://uk.linkedin.com/in/giacomogorelli" target="_blank" rel="me" class="contact-inline" aria-label="Giacomo Gorelli's LinkedIn Profile">
+                    <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> linkedin.com/in/giacomogorelli
+                </a>
+            </div>
+
+            <footer>
+                SOCRATIC SOLUTIONS di GORELLI GIACOMO <br>
+                VAT Number: 02529010510 <br>
+                &copy; 2026 All rights reserved.
+            </footer>
+            
+        </section>
+
+    </main>
+
+    <script>
+        const emailLink = document.getElementById('emailLink');
+        const emailAddress = 'socraticsolutions@proton.me';
+
+        function handleEmailAction(e) {
+            e.preventDefault();
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                window.location.href = `mailto:${emailAddress}`;
+            } else {
+                navigator.clipboard.writeText(emailAddress).then(() => {
+                    emailLink.classList.add('show');
+                    setTimeout(() => emailLink.classList.remove('show'), 2000);
+                }).catch(err => {
+                    window.location.href = `mailto:${emailAddress}`;
+                });
+            }
+        }
+
+        emailLink.addEventListener('click', handleEmailAction);
+        emailLink.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                handleEmailAction(e);
+            }
+        });
+    </script>
+
+</body>
+</html>
