@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Link alla sitemap su GitHub Pages
+Sitemap: https://socraticsolutions.github.io/sitemap.xml
